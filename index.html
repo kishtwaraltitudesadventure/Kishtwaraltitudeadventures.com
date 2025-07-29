@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KISHTWAR ALTITUDES ADVENTURES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      background: url('bg.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .site-header {
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+    }
+
+    .site-header .logo {
+      height: 80px;
+      width: 80px;
+    }
+
+    .site-title {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .tagline {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 0.9em;
+      margin-top: 5px;
+      color: #ccc;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 70px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      display: none;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .highlight {
+      background: rgba(0, 0, 0, 0.23);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 300px;
+      aspect-ratio: 4 / 3;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    footer {
+      text-align: center;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .site-header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        top: 110px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="logo.jpg" alt="Logo" class="logo">
+    <div>
+      <h1 class="site-title">KISHTWAR ALTITUDES ADVENTURES</h1>
+      <p class="tagline">EXPLORE THE UNKNOWN</p>
+    </div>
+  </header>
+
+  <nav>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('packages')">Packages</a>
+    <a onclick="showSection('gallery')">Gallery</a>
+    <a onclick="showSection('contact')">Contact</a>
+  </nav>
+
+  <main>
+    <section id="home" class="active">
+      <div class="highlight">
+        <h1>Welcome to Kishtwar Altitudes Adventures</h1>
+        <p>This is the official website of Kishtwar Altitudes Adventure. Join us and let's explore the nature of Paddar.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="highlight">
+        <h2>About Us</h2>
+        <p>We are here to help you trek in the beautiful mountains and valleys of Kishtwar. Our team is dedicated to safe and adventurous experiences through nature.</p>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="highlight">
+        <h2>Our Trekking Packages</h2>
+        <ul>
+          <li><strong>Gandhari Trek (5 days)</strong> – ₹8,999</li>
+          <li><strong>Kabban Trek (7 days)</strong> – ₹12,500</li>
+          <li><strong>Spiti Trek (6 days)</strong> – ₹11,000</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="highlight">
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <img src="k1.png" alt="Trek Image 1">
+          <img src="k2.png" alt="Trek Image 2">
+          <img src="k3.png" alt="Trek Image 3">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="highlight">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:kishtwaraltitudesadventures@gmail.com">kishtwaraltitudesadventures@gmail.com</a></p>
+        <p>Phone: <a href="tel:+916005011508">+91-6005011508</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/kishtwaraltitudeadvature/" target="_blank">@kishtwaraltitudesadventures</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 KISHTWAR ALTITUDES ADVENTURES. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
